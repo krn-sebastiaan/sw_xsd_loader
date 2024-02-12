@@ -1,0 +1,11 @@
+<project>
+    <property environment="env"/>
+
+    <property name="mojo_source_path" value="${env.GITHUB_WORKSPACE}/../"/>
+    <property name="mojo_installer_dir" value="${env.GITHUB_WORKSPACE}"/>
+
+    <property name="mojo_strict" value="false"/>
+    <property name="requires_jacoco_report" value="false"/>
+
+    <import file="${env.KRN_CORE_LOCATION}/modules/mojo_lifecycle/resources/base/data/blueprint.xml"/>
+</project>

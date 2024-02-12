@@ -1,0 +1,17 @@
+name: Release mMojo
+
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+  release:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release mMojo
+        uses: krn-sebastiaan/actions/release@main
+        with:
+          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
